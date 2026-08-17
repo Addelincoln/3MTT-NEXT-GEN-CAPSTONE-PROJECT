@@ -1,4 +1,4 @@
-# SME App Migration to Azure
+# SME Web App Migration to Azure
   ## Project Overview
 Many Nigerian SMEs run their point-of-sale, inventory, or booking applications on a single on-premises PC or local server where they are to provide to make sure the server keep running. These setups fail during power outages with no trusted backup, and cannot be accessed remotely. This capstone migrates a simple LAMP (Linux, Apache, MySQL, PHP) application from a fragile local server to a resilient, remotely accessible cloud instance on the Microsoft Azure Free Tier — at zero or near-zero cost.
 This migration to a cloud-hosted Azure VM was provisioned via both the Azure CLI and Terraform, secured with a network security group, and reachable through a free DNS name i.e. http://migrate-sme-app.duckdns.org.
