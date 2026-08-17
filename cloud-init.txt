@@ -1,0 +1,19 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - apache2
+  - php
+  - libapache2-mod-php
+  - php-mysql
+  - mysql-server
+  - unzip
+
+runcmd:
+  - systemctl enable apache2
+  - systemctl enable mysql
+  - ufw allow OpenSSH
+  - ufw allow "Apache Full"
+  - ufw --force enable
+  - mysql -e "CREATE DATABASE sme_app;"
+  - chown -R www-data:www-data /var/www/html
